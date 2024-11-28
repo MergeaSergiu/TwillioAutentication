@@ -1,12 +1,12 @@
 package com.example.twillioautentication.repository;
 
-import com.example.twillioautentication.entity.User;
+
+import com.example.twillioautentication.entity.OTP;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface OTPRepository extends JpaRepository<OTP, Long> {
 
-    User findByEmail(String username);
+    OTP getByOTP(String otp);
 }
